@@ -1,0 +1,155 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    max-width: 100%;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+    font-family: "Inter", sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 1em;
+}
+
+nav ul li a:hover {
+    background-color: #B8EE20;
+    border-radius: 10rem;
+    color: black;
+}
+
+.hire {
+    border: #B8EE20 solid 1px;
+    border-radius: 10rem;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    left: 30px;
+}
+
+.grid_columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Correct grid-template-columns */
+    grid-template-areas: 
+        "header header"
+        "left right"; /* Definieert de layout van de grid gebieden */
+    gap: 20px; /* Ruimte tussen de kolommen */
+    padding: 3rem 10rem;
+    text-align: center;
+}
+
+.header {
+    grid-area: header; /* De header beslaat de volledige breedte van de grid */
+    border: 1px solid #1C1C1C;
+    border-radius: 2rem;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left {
+    grid-area: left; /* De linker kolom in de onderste rij */
+    border: 1px solid #1C1C1C;
+    border-radius: 2rem;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left p {
+    max-width: 300px;
+    line-height: 1.2;
+}
+
+.small {
+    font-size: 0.8em;
+    margin: 0.8em;
+}	
+
+.right {
+    grid-area: right; /* De rechter kolom in de onderste rij */
+    border: 1px solid #1C1C1C;
+    border-radius: 2rem;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header-flex {
+    display: flex;
+}
+
+.header h2 {
+    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    font-size: 0.8em;
+}
+
+.header h1 {
+    font-size: 3em;
+    padding-bottom: 1em;
+    padding-top: 1.2em;
+    padding-left: 0.5em;
+    margin: 0;
+}
+
+.header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+}
+
+.green {
+    color: #B8EE20;
+    display: inline;
+}
+
+/* media  */
+@media (max-width: 900px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 80%;
+        height: 100%;
+        background-color: #1C1C1C;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 50px 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 25px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
