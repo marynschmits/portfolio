@@ -5,44 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="javascript/java.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Portfolio Maryn Schmits</title>
 </head>
 <body>
+    <div class="customcursor">
     <header>
         <nav>
             <button class="menu-toggle" aria-label="Open menu">☰</button>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
                 <li><a class="hire" href="#">Hire</a></li>
             </ul>
         </nav>
+
+        <div class="name">
+
+            <h1>Hello, I'm <div id="dynamic-text" class="green"></div></h1>
+            <img src="assets/swipe-down.png" alt="swipe-down-button">
     </header>
     <main>
-        <div class="grid_columns">
-            <div class="column header">
-                <h2>Hello👋</h2>
-                <div class="header-flex">
-                    <h1>I'm <div class="green">Maryn</div></h1>
-                    <img src="assets/Union.png" alt="maryn_blackwhite">
-                </div>
-            </div>
-            <div class="column left">
+        <div class="grid-container-intro">
+
+            <div class="grid-item-intro">
                 <p>UX/UI Designer & Developer
                     <div class="small">based in</div>
-                    <div class="green">The Netherlands</div>
-                </p>
+                    <div class="green"><div class="customcursornl">The Netherlands</div></div></p>
             </div>
-            <div class="column right">
+
+            <div class="grid-item-intro">
                 <p>Did you know this <div class="green">website</div> is 100% <div class="green">code?</div></p>
             </div>
+            <div class="grid-item-photo">
+            
+            </div>
+            
         </div>
+
+        <div class="grid-container-skills">
+            <div class="grid-item-skills">
+               <h2>My skills are</h2>
+            </div>
+
+            <div class="grid-item-skills">
+                <div class="grid-item-skillbox">
+                    <p>Branding</p> 
+                    <p>Coding</p>
+                    <p>Research</p>
+                    <p>Videography</p>
+                    <p>Photography</p>
+                    <p>Logo design</p>
+                    <p>Webdesign</p>
+                </div>
+            
+            
+            </div>
+
+        </div>
+
+
+        <div class="grid-container-stats">
+
+            <div class="grid-item-stats">
+                <h2 class="green">+1</h2>
+                <p>years experience</p>
+            </div>
+
+            <div class="grid-item-stats">
+                <h2 class="green">5</h2>
+                <p>happy customers so far</p>
+            </div>
+            <div class="grid-item-stats">
+                <h2 class="green">+95%</h2>
+                <p>customer satisfaction</p>
+            </div>
+            
+        </div>
+
+        <div class="grid-container-work">
+            <h2>Recent</h2>
+
+            <div class="grid-item-work">
+                <img src="assets/startcode-cover.png" alt="Project 1">
+
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h4>Star[t]code</h4>
+                    <p>jun. 2024</p></div>
+                </div>
+                
+
+            </div>
+            <div class="grid-item-work">
+                <img src="assets/unseenworld-cover.png" alt="Project 2">
+                
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h4>The Unseen World </h4>
+                    <p>apr. 2024</p></div>
+                </div>
+
+            </div>
+            <div class="grid-item-work">
+                <img src="assets/classico-cover.png" alt="Project 3">
+
+                <div class="overlay">
+                    <div class="overlay-text">
+                        <h4>Rebrand Classico Hairstyling </h4>
+                    <p>mrt. 2024</p></div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <h1>Let's <div class="green">design</div> it<div class="green">.</div></h1>
+       
     </main>
     <footer></footer>
+
+    <script src="javascript/java.js"></script>
+</div>
 </body>
 </html>

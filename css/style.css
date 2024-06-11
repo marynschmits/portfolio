@@ -4,6 +4,15 @@ body {
     max-width: 100%;
     font-family: "Josefin Sans", sans-serif;
     font-size: 40px;
+    
+}
+
+.customcursor {
+    cursor: url(../assets/cursor.png), auto;
+}
+
+.customcursornl {
+    cursor: url(../assets/nl-cursor.png), auto;
 }
 
 nav {
@@ -50,81 +59,147 @@ nav ul li a:hover {
     left: 30px;
 }
 
-.grid_columns {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Correct grid-template-columns */
-    grid-template-areas: 
-        "header header"
-        "left right"; /* Definieert de layout van de grid gebieden */
-    gap: 20px; /* Ruimte tussen de kolommen */
-    padding: 3rem 10rem;
+.name {
     text-align: center;
+    height: 100vh;
 }
 
-.header {
-    grid-area: header; /* De header beslaat de volledige breedte van de grid */
-    border: 1px solid #1C1C1C;
-    border-radius: 2rem;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.left {
-    grid-area: left; /* De linker kolom in de onderste rij */
-    border: 1px solid #1C1C1C;
-    border-radius: 2rem;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.left p {
-    max-width: 300px;
-    line-height: 1.2;
+.name h1 {
+    padding-top: 40vh;
+    font-size: 1em;
 }
 
 .small {
     font-size: 0.8em;
     margin: 0.8em;
-}	
-
-.right {
-    grid-area: right; /* De rechter kolom in de onderste rij */
-    border: 1px solid #1C1C1C;
-    border-radius: 2rem;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.header-flex {
-    display: flex;
-}
-
-.header h2 {
-    text-align: center;
-    padding-bottom: 1em;
-    padding-top: 1em;
-    font-size: 0.8em;
-}
-
-.header h1 {
-    font-size: 3em;
-    padding-bottom: 1em;
-    padding-top: 1.2em;
-    padding-left: 0.5em;
-    margin: 0;
-}
-
-.header img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-}
+}    
 
 .green {
     color: #B8EE20;
     display: inline;
 }
+
+header img {
+   
+    padding-top: 8em;
+}
+
+/* intro  */
+
+.grid-container-intro {
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Standaard één kolom */
+    gap: 2rem;
+    max-width: 80%;
+    margin: 0 auto;
+    
+
+}
+
+.grid-item-intro {
+    border: #1C1C1C solid 1px;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    color: white; /* Toevoegen van tekstkleur voor leesbaarheid */
+    padding: 2em;
+    text-align: center;
+    
+    
+}
+
+.grid-item-photo {
+    border-radius: 2rem;
+    box-sizing: border-box;
+    background-image: url(../assets/Union2.png);
+    filter: grayscale(100%);  
+    height: 400px;
+}
+
+.grid-item-photo:hover {
+    transition: 1s;
+    filter: grayscale(0%); 
+    
+}
+
+
+/* skills  */
+
+.grid-container-skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Standaard één kolom */
+    gap: 1rem;
+    max-width: 60%;
+    margin: 0 auto;
+
+}
+
+.grid-item-skills {
+    box-sizing: border-box;
+    color: white; /* Toevoegen van tekstkleur voor leesbaarheid */
+    padding-top: 6em;
+    text-align: center;
+}
+
+.grid-item-skillbox {
+    display: grid;
+    grid-template-columns: auto auto auto; /* Standaard één kolom */
+    gap: 1rem;
+}
+
+.grid-item-skillbox p {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5rem;
+    border: #B8EE20 solid 1px;
+    color: #B8EE20;
+    border-radius: 2rem;
+    padding: 0.5em
+}
+
+.grid-item-skillbox p:hover {
+    background-color: #B8EE20;
+    color: black;
+}
+
+
+
+.grid-container-stats {
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Standaard één kolom */
+    gap: 2rem;
+    padding-top: 6em;
+    max-width: 70%;
+    margin: 0 auto;
+    
+
+}
+
+.grid-item-stats {
+    border: #1C1C1C solid 1px;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    color: white; /* Toevoegen van tekstkleur voor leesbaarheid */
+    padding: 2em;
+    text-align: center;
+    
+    
+}
+
+
+/* projects  */
+
+
+
+h1 {
+    font-size: 6rem;
+    text-align: center;
+    padding: 1em;
+}
+
+
+
 
 /* media  */
 @media (max-width: 900px) {
@@ -152,4 +227,133 @@ nav ul li a:hover {
     .menu-toggle {
         display: block;
     }
+}
+
+/* Media query voor schermen tussen 768px en 1024px */
+@media (max-width: 1024px) {
+    .grid-container-intro {
+        grid-template-columns: repeat(2, 1fr); 
+        /* Twee kolommen */
+    }
+
+}
+
+/* Media query voor schermen kleiner dan 768px */
+@media (max-width: 768px) {
+    .grid-container-intro {
+        grid-template-columns: 1fr; /* Eén kolom */
+    }
+
+    .grid-container-skills {
+        grid-template-columns: 1fr; /* Standaard één kolom */
+    
+    }
+
+    .grid-container-stats {
+        grid-template-columns: 1fr; /* Standaard één kolom */
+    
+    }
+
+    .grid-container-skills {
+        max-width: 80%;
+        gap: 0.5rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+
+
+h2 {
+    font-size: 4rem;
+}
+
+
+
+
+/* work */
+
+.grid-container-work {
+    display: grid;
+    grid-template-columns: 1fr; /* Alle kolommen onder elkaar */
+    gap: 3rem;
+    padding: 2rem;
+    padding-top: 8rem;
+    width: 70%; /* Horizontaal 70% van het beeld vullen */
+    margin: 0 auto; /* Centraal uitlijnen */
+}
+
+.grid-item-work {
+    background-color: #1C1C1C;
+    border-radius: 3rem;
+    height: 70vh; /* Verhoudingsgewijze padding voor betere schaalbaarheid */
+    box-sizing: border-box;
+    color: white; /* Toevoegen van tekstkleur voor leesbaarheid */
+    box-shadow: 0px 0px 10px 10px rgba(255, 253, 253, 0.07);
+    position: relative; /* Nodig voor de overlay positioning */
+    overflow: hidden; /* Zorgt ervoor dat de overlay niet buiten de container komt */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Donkere semi-transparante achtergrond */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.grid-item-work:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    color: white;
+    font-size: 2rem; /* Pas de tekstgrootte aan naar wens */
+    text-align: center;
+
+}
+.overlay-text p {
+    font-size: 1.5rem;
+    color: #B8EE20;
+}
+
+.grid-item-work img {
+    border-radius: 3rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.grid-item-work:hover {
+    transform: scale(1.05);
+}
+
+
+.grid-container-work h2 {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+
+
+/* about */
+
+
+.about-button {
+    height: 100vh;
+}
+
+.about-button h2 {
+    padding-top: 40vh;
+    text-align: center;
 }
