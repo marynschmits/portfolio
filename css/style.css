@@ -66,7 +66,7 @@ nav ul li a:hover {
 
 .name h1 {
     padding-top: 40vh;
-    font-size: 1em;
+    font-size: 2.5rem;
 }
 
 .small {
@@ -150,8 +150,8 @@ header img {
     text-align: center;
     font-weight: 400;
     font-size: 1.5rem;
-    border: #B8EE20 solid 1px;
-    color: #B8EE20;
+    border: var(--text-color-skills) solid 1px;
+    color: var(--text-color-skills);
     border-radius: 2rem;
     padding: 0.5em
 }
@@ -273,6 +273,12 @@ h1 {
 
 /* Media query voor schermen kleiner dan 768px */
 @media (max-width: 768px) {
+
+    .name h1 {
+        font-size: 1.5rem;
+    }
+
+
     .grid-container-intro {
         grid-template-columns: 1fr; /* Eén kolom */
     }
@@ -581,10 +587,12 @@ button:hover {
 :root {
     --background-color: #000000;
     --text-color: #ffffff;
+    --text-color-skills: #B8EE20;
 }	
 
 .dark {
     --background-color: #ebf0ec;
     --text-color: #000000;
+    --text-color-skills: #000000;
   }
   
