@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,6 +40,12 @@
             
     </header>
     <main>
+        <div class="social-container">
+            <a href="https://www.instagram.com/maryn_schmits/" class="social-button"><img src="assets/instagram.png" alt="instagramlogo"></a>
+            <a href="#" class="social-button"><img src="assets/facebook.png" alt="facebooklogo"></a>
+            <a href="#" class="social-button"><img src="assets/linkedin.png" alt="linkedinlogo"></a>
+        </div>
+
         <div class="grid-container-intro">
 
             <div class="grid-item-intro">
@@ -156,12 +163,19 @@
                     </section>
 
         </div>
+
+        <div id="inline-datepicker"></div>
+        <button id="submitBtn">Afspraak maken</button>
             
     
     </footer>
     
    
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 <script src="javascript/java.js"></script>
 </body>
 </html>

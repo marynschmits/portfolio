@@ -596,3 +596,58 @@ button:hover {
     --text-color-skills: #000000;
   }
   
+
+
+  .flatpickr-calendar {
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #B8EE20;
+    color: white;
+}
+
+.flatpickr-day.selected {
+    background-color: #1C1C1C;
+    border: none;
+    color: white;
+}
+
+#submitBtn {
+    background-color: #B8EE20;
+    color: black;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 3rem;
+    font-size: 0.8rem;
+    width: fit-content;
+    height: fit-content;
+    margin: 2rem;
+}
+
+
+
+.social-container {
+    position: fixed;
+    top: 35%;
+    left: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+}
+
+.social-button {
+    display: block;
+    margin: 1rem 0;
+    background-color: #B8EE20;
+    border-radius: 50rem;
+    padding: 0.75rem;
+    text-align: center;
+    width: 2.5rem;
+}
+
+.social-button:hover {
+    background-color: #99d100;
+}
+  

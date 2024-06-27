@@ -93,12 +93,23 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
-  
-  
- 
 
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    const datepicker = flatpickr("#inline-datepicker", {
+        dateFormat: "Y-m-d",
+        inline: true // Maakt de datepicker altijd zichtbaar
+    });
 
+    document.getElementById("submitBtn").addEventListener("click", function() {
+        const selectedDate = datepicker.selectedDates[0];
+        if (selectedDate) {
+            alert("Je afspraak voor " + selectedDate.toLocaleDateString() + " is bevestigd!");
+        } else {
+            alert("Selecteer een datum voordat je verzendt.");
+        }
+    });
+});
 
 
 
