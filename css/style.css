@@ -1,6 +1,6 @@
 body {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--background-color);
+    color: var(--text-color);
     max-width: 100%;
     font-family: "Josefin Sans", sans-serif;
     font-size: 40px;
@@ -32,7 +32,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
     padding: 1em;
@@ -75,7 +75,7 @@ nav ul li a:hover {
 }    
 
 .green {
-    color: #B8EE20;
+    color: #abdf1d;
     display: inline;
 }
 
@@ -101,7 +101,7 @@ header img {
     border: #1C1C1C solid 1px;
     border-radius: 2rem;
     box-sizing: border-box;
-    color: white; /* Toevoegen van tekstkleur voor leesbaarheid */
+    
     padding: 2em;
     text-align: center;
     
@@ -114,6 +114,7 @@ header img {
     background-image: url(../assets/Union2.png);
     filter: grayscale(100%);  
     height: 400px;
+    background-repeat: no-repeat;
 }
 
 .grid-item-photo:hover {
@@ -127,35 +128,68 @@ header img {
 
 .grid-container-skills {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Standaard één kolom */
+    grid-template-columns: repeat(2, 1fr); /* Standaard twee kolommen */
     gap: 1rem;
     max-width: 60%;
     margin: 0 auto;
-
 }
 
 .grid-item-skills {
     box-sizing: border-box;
-    color: white; /* Toevoegen van tekstkleur voor leesbaarheid */
     padding-top: 6em;
     text-align: center;
 }
 
 .grid-item-skillbox {
     display: grid;
-    grid-template-columns: auto auto auto; /* Standaard één kolom */
+    grid-template-columns: auto auto auto; /* Standaard drie kolommen */
     gap: 1rem;
 }
 
 .grid-item-skillbox p {
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.5rem;
     border: #B8EE20 solid 1px;
     color: #B8EE20;
     border-radius: 2rem;
     padding: 0.5em
 }
+
+/* Media Queries voor responsiviteit */
+
+/* Voor schermen kleiner dan 1024px */
+@media (max-width: 1024px) {
+    .grid-container-skills {
+        grid-template-columns: repeat(2, 1fr); /* Twee kolommen */
+    }
+
+    .grid-item-skillbox {
+        grid-template-columns: auto auto; /* Twee kolommen */
+    }
+}
+
+/* Voor schermen kleiner dan 768px */
+@media (max-width: 768px) {
+    .grid-container-skills {
+        grid-template-columns: 1fr; /* Eén kolom */
+    }
+
+    .grid-item-skillbox {
+        grid-template-columns: auto; /* Eén kolom */
+    }
+}
+
+/* Voor schermen kleiner dan 480px */
+@media (max-width: 480px) {
+    .grid-container-skills {
+        grid-template-columns: 1fr; /* Eén kolom */
+        max-width: 100%; /* Volledige breedte */
+    }
+
+
+}
+
 
 .grid-item-skillbox p:hover {
     background-color: #B8EE20;
@@ -180,7 +214,6 @@ header img {
     border: #1C1C1C solid 1px;
     border-radius: 2rem;
     box-sizing: border-box;
-    color: white; /* Toevoegen van tekstkleur voor leesbaarheid */
     padding: 2em;
     text-align: center;
     
@@ -250,17 +283,39 @@ h1 {
     }
 
     .grid-container-stats {
-        grid-template-columns: 1fr; /* Standaard één kolom */
+        grid-template-columns: 0.8fr;
+        max-width: 95%; /* Standaard één kolom */
+        
     
     }
 
     .grid-container-skills {
         max-width: 80%;
         gap: 0.5rem;
+        grid-template-columns: 1fr; /* Standaard één kolom */
+        
+    }
+
+    .grid-item-skills {
+        padding-top: 8rem;
     }
 
     h1 {
-        font-size: 5rem;
+        font-size: 3rem;
+    }
+
+
+    .grid-container-skills {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+
+    .grid-item-skillbox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-container-work {
+        width: 95%;
     }
 }
 
@@ -357,3 +412,179 @@ h2 {
     padding-top: 40vh;
     text-align: center;
 }
+
+
+
+
+
+/* footer */
+
+footer {
+    border: #1C1C1C solid 1px;
+    border-radius: 3rem;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    
+}
+
+.footer-item {
+    padding: 1em;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+form {
+    background: none;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 500px;
+    align-items: center;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    background-color: #1C1C1C;
+    border: none;
+    border-radius: 0.25rem;
+}
+
+button {
+    background-color:#B8EE20;
+    color: black;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 3rem;
+}
+
+button:hover {
+    background-color: #99d100;
+}
+
+#response-message {
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+
+
+
+
+/* about */
+
+
+
+.grid-container-about {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Standaard één kolom */
+    gap: 1rem;
+    max-width: 70%;
+    margin: 0 auto;
+    height: 70vh;
+
+}
+
+.grid-item-about {
+    box-sizing: border-box;
+    color: white; /* Toevoegen van tekstkleur voor leesbaarheid */
+  
+}
+
+.grid-item-about p {
+    padding-top: 1rem;
+    font-weight: 300;
+    font-size: 1.75rem;
+    padding-right: 2rem;
+}
+
+.back {
+    position: fixed;
+    padding: 2rem;
+}
+
+.project-name {
+    height: 100vh;
+    padding-top: 35vh;
+    text-align: center;
+}
+
+.project-textarea {
+    max-width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+.toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.toggle-slot {
+    position: relative;
+    height: 4rem; /* Set height to 4rem */
+    width: 8rem; /* Set width to 8rem */
+    border-radius: 4rem; /* Adjust border-radius to match new height */
+    background-color: #151516;
+    box-shadow: 0px 0px 5px 5px rgba(255, 253, 253, 0.07); /* Adjust shadow to match new size */
+    transition: background-color 250ms;
+}
+
+.toggle-checkbox:checked ~ .toggle-slot {
+    background-color: white
+}
+
+.toggle-button {
+    transform: translate(4.5rem, 0.5rem); /* Adjust translate values to match new size */
+    position: absolute;
+    height: 3rem; /* Adjust height */
+    width: 3rem; /* Adjust width */
+    border-radius: 50%;
+    background-color: #B8EE20;
+    box-shadow: inset 0px 0px 0px 0.375rem #91bd18; /* Adjust inset shadow */
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+    background-color: #91bd18;
+    box-shadow: inset 0px 0px 0px 0.375rem #B8EE20; /* Adjust inset shadow */
+    transform: translate(0.5rem, 0.5rem); /* Adjust translate values to match new size */
+}
+
+.toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(1rem, 1rem) rotate(0deg); /* Adjust translate values to match new size */
+}
+
+
+
+
+/* light dark mode */
+
+:root {
+    --background-color: #000000;
+    --text-color: #ffffff;
+}	
+
+.dark {
+    --background-color: #ebf0ec;
+    --text-color: #000000;
+  }
+  

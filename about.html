@@ -31,30 +31,76 @@
         
     </header>
 
-    <div class="grid-container-intro">
-
-        <div class="grid-item-intro">
-            <p>UX/UI Designer & Developer
-                <div class="small">based in</div>
-                <div class="green"><div class="customcursornl">The Netherlands</div></div></p>
-        </div>
-
-        <div class="grid-item-intro">
-            <p>Did you know this <div class="green">website</div> is 100% <div class="green">code?</div></p>
-        </div>
-        <div class="grid-item-photo">
-        
-        </div>
-        
-    </div>
-
     </header>
+
+
     <main>
+        <div class="grid-container-about">
+            <div class="grid-item-about">
+               <h2>Welkom</h2>
+               <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            </p>
+            </div>
+
+        
+                <div class="grid-item-about">
+                    <div class="grid-item-photo">
+            
+                    </div>
+                </div>
+
+                
+            
+            
+            </div>
+
+        </div>
 
       
 
+        <h1>Let's <div class="green">design</div> it<div class="green">.</div></h1>
+       
     </main>
-    <footer></footer>
+    <footer id="contact-form">
+       <div class="footer-item">
+                <h3>Contact</h3>
+                <p>
+                    <section>
+                        <form id="contact-form">
+                            <input type="text" id="name" name="name" placeholder="naam" required>
+            
+                
+                            <input type="email" id="email" name="email" placeholder="e-mailadres" required>
+            
+                            
+                            <textarea id="message" name="message" rows="4" placeholder="bericht" required></textarea>
+            
+                            <button type="submit">Verzenden</button>
+                        </form>
+                        <p id="response-message" style="display: none;"></p>
+                    </section>
+
+        </div>
+            
+        <div class="footer-item">
+                    <div class="calender">
+                        
+                        <div class="calendar-header">
+                            <button id="prevMonth">Vorige</button>
+                            <span id="currentMonth"></span>
+                            <button id="nextMonth">Volgende</button>
+                        </div>
+                        <div id="calendar"></div>
+                        <div id="slots"></div>
+                    </div>
+
+        </div>
+    </footer>
+
+
+     <script src="javascript/java.js"></script>
     </div>
+    
 </body>
 </html>

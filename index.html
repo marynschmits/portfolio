@@ -17,16 +17,26 @@
             <button class="menu-toggle" aria-label="Open menu">☰</button>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a class="hire" href="#">Hire</a></li>
+                <li><a href="work.html">Werk</a></li>
+                <li><a class="hire" href="#contact-form">Contact</a></li>
+
             </ul>
+            <label>
+                <input class='toggle-checkbox' type='checkbox'></input>
+                <div class='toggle-slot'>
+                  <div class='sun-icon-wrapper'>
+                    <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                  </div>
+                  <div class='toggle-button'></div>
+                  
+                </div>
+              </label>
         </nav>
 
         <div class="name">
 
-            <h1>Hello, I'm <div id="dynamic-text" class="green"></div></h1>
-            <img src="assets/swipe-down.png" alt="swipe-down-button">
+            <h1>Hallo, ik ben <div id="dynamic-text" class="green"></div></h1>
+            
     </header>
     <main>
         <div class="grid-container-intro">
@@ -38,7 +48,7 @@
             </div>
 
             <div class="grid-item-intro">
-                <p>Did you know this <div class="green">website</div> is 100% <div class="green">code?</div></p>
+                <p>Wist je dat deze <div class="green">website</div> voor <div class="green"> 100%</div> uit <div class="green">code </div> bestaat?</p>
             </div>
             <div class="grid-item-photo">
             
@@ -48,16 +58,16 @@
 
         <div class="grid-container-skills">
             <div class="grid-item-skills">
-               <h2>My skills are</h2>
+               <h2>Mijn skills zijn</h2>
             </div>
 
             <div class="grid-item-skills">
                 <div class="grid-item-skillbox">
                     <p>Branding</p> 
-                    <p>Coding</p>
-                    <p>Research</p>
-                    <p>Videography</p>
-                    <p>Photography</p>
+                    <p>Code</p>
+                    <p>Onderzoek</p>
+                    <p>Videografie</p>
+                    <p>Fotografie</p>
                     <p>Logo design</p>
                     <p>Webdesign</p>
                 </div>
@@ -72,16 +82,16 @@
 
             <div class="grid-item-stats">
                 <h2 class="green">+1</h2>
-                <p>years experience</p>
+                <p>jaren ervaring</p>
             </div>
 
             <div class="grid-item-stats">
                 <h2 class="green">5</h2>
-                <p>happy customers so far</p>
+                <p>klanten tot nu toe</p>
             </div>
             <div class="grid-item-stats">
                 <h2 class="green">+95%</h2>
-                <p>customer satisfaction</p>
+                <p>klanttevredenheid</p>
             </div>
             
         </div>
@@ -126,9 +136,32 @@
         <h1>Let's <div class="green">design</div> it<div class="green">.</div></h1>
        
     </main>
-    <footer></footer>
+    <footer id="contact-form">
+       <div class="footer-item">
+                <h3>Contact</h3>
+                <p>
+                    <section>
+                        <form id="contact-form">
+                            <input type="text" id="name" name="name" placeholder="naam" required>
+            
+                
+                            <input type="email" id="email" name="email" placeholder="e-mailadres" required>
+            
+                            
+                            <textarea id="message" name="message" rows="4" placeholder="bericht" required></textarea>
+            
+                            <button type="submit">Verzenden</button>
+                        </form>
+                        <p id="response-message" style="display: none;"></p>
+                    </section>
 
-    <script src="javascript/java.js"></script>
+        </div>
+            
+    
+    </footer>
+    
+   
 </div>
+<script src="javascript/java.js"></script>
 </body>
 </html>

@@ -39,3 +39,66 @@ function typeWord() {
 }
 
 typeWord();
+
+
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const responseMessage = document.getElementById('response-message');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Voorkom standaard formulierverzending
+
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+
+        // Simuleer een AJAX-verzoek
+        setTimeout(() => {
+            // Hier zou je de gegevens naar je server sturen
+            console.log('Form data:', data);
+
+            // Simuleer een succesvolle reactie
+            responseMessage.textContent = 'Bedankt voor je bericht!';
+            responseMessage.style.color = '#B8EE20';
+            responseMessage.style.display = 'block';
+            responseMessage.style.fontFamily = 'Kayak Sans';
+            responseMessage.style.fontSize = '1.5rem';
+
+            // Reset het formulier
+            form.reset();
+        }, 500);
+    });
+
+
+    
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const checkbox = document.querySelector('.toggle-checkbox');
+  
+    checkbox.addEventListener('change', function() {
+      if (this.checked) {
+        // Zet dark mode aan
+        document.documentElement.classList.add('dark');
+      } else {
+        // Zet dark mode uit
+        document.documentElement.classList.remove('dark');
+      }
+    });
+  });
+  
+  
+  
+ 
+
+
+
+
+

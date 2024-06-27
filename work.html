@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="javascript/java.js"></script>
+    <script defer src="javascript/java.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -18,64 +18,70 @@
             <button class="menu-toggle" aria-label="Open menu">☰</button>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a class="hire" href="#">Hire</a></li>
-            </ul>
-        </nav>
+                <li><a href="work.html">Werk</a></li>
+                <li><a class="hire" href="#contact-form">Contact</a></li>
 
+            </ul>
+            <label>
+                <input class='toggle-checkbox' type='checkbox'></input>
+                <div class='toggle-slot'>
+                  <div class='sun-icon-wrapper'>
+                    <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                  </div>
+                  <div class='toggle-button'></div>
+                  
+                </div>
+              </label>
+        </nav>
     </header>
     <main>
-
-      
-
-       <div class="grid-container-work">
-        <h2>Recent</h2>
-            <div class="grid-item-work">
+        <div class="grid-container-work">
+            <h2>Recent</h2>
+            <div class="grid-item-work" id="project-link">
                 <img src="assets/startcode-cover.jpg" alt="Project 1">
                 <div class="overlay">
                     <div class="overlay-text">
                         <h4>Star[t]code</h4>
-                    <p>jun. 2024</p></div>
+                        <p>jun. 2024</p>
+                    </div>
                 </div>
             </div>
+
+
             <div class="grid-item-work">
                 <img src="assets/unseenworld-cover.jpg" alt="Project 2">
                 <div class="overlay">
                     <div class="overlay-text">
                         <h4>The Unseen World </h4>
-                    <p>apr. 2024</p></div>
+                        <p>apr. 2024</p>
+                    </div>
                 </div>
-
             </div>
             <div class="grid-item-work">
                 <img src="assets/blindnessdocu-cover.jpg" alt="Project 4">
                 <div class="overlay">
                     <div class="overlay-text">
                         <h4>The Unseen World; Docu</h4>
-                    <p>apr. 2024</p></div>
+                        <p>apr. 2024</p>
+                    </div>
                 </div>
-                
-                
             </div>
-
-            
             <div class="grid-item-work">
                 <img src="assets/classico-cover.png" alt="Project 3">
                 <div class="overlay">
                     <div class="overlay-text">
                         <h4>Rebrand Classico Hairstyling</h4>
-                    <p>mrt. 2024</p></div>
+                        <p>mrt. 2024</p>
+                    </div>
                 </div>
-                
             </div>
-          
             <div class="grid-item-work">
                 <img src="assets/readirect.cover.jpg" alt="Project 5">
                 <div class="overlay">
                     <div class="overlay-text">
                         <h4>Readirect; Campaign</h4>
-                    <p>feb. 2024</p></div>
+                        <p>feb. 2024</p>
+                    </div>
                 </div>
             </div>
             <div class="grid-item-work">
@@ -83,12 +89,32 @@
                 <div class="overlay">
                     <div class="overlay-text">
                         <h4>Morgen; Photo reportage</h4>
-                    <p>nov. 2023</p></div>
+                        <p>nov. 2023</p>
+                    </div>
                 </div>
             </div>
        </div>
+       <h1>Let's <div class="green">design</div> it<div class="green">.</div></h1>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-item">
+            <h3>Contact</h3>
+            <p>
+            <section>
+                <form id="contact-form">
+                    <input type="text" id="name" name="name" placeholder="naam" required>
+                    <input type="email" id="email" name="email" placeholder="e-mailadres" required>
+                    <textarea id="message" name="message" rows="4" placeholder="bericht" required></textarea>
+                    <button type="submit">Verzenden</button>
+                </form>
+                <p id="response-message" style="display: none;"></p>
+            </section>
+        </div>
+    </footer>
+
+
     </div>
+
+    <script src="javascript/java.js"></script>
 </body>
 </html>
