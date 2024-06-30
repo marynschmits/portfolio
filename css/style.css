@@ -354,33 +354,6 @@ button:hover {
     margin-top: 1rem;
 }
 
-.flatpickr-calendar {
-    font-size: 1rem;
-    border: none;
-    border-radius: 0.25rem;
-    background-color: #B8EE20;
-    color: white;
-}
-
-.flatpickr-day.selected {
-    background-color: #1C1C1C;
-    border: none;
-    color: white;
-}
-
-#submitBtn {
-    background-color: #B8EE20;
-    color: black;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 3rem;
-    font-size: 0.8rem;
-    width: fit-content;
-    height: fit-content;
-    margin: 2rem;
-}
-
-
 /* toggle */
 .toggle-checkbox {
     position: absolute;
@@ -441,7 +414,138 @@ button:hover {
   }
   
 
+
+  .flatpickr-calendar {
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #B8EE20;
+    color: white;
+}
+
+.flatpickr-day.selected {
+    background-color: #1C1C1C;
+    border: none;
+    color: white;
+}
+
+#submitBtn {
+    background-color: #B8EE20;
+    color: black;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 3rem;
+    font-size: 0.8rem;
+    width: fit-content;
+    height: fit-content;
+    margin: 2rem;
+}
+
 /* toggle geleend en aangepast van externe site  */
+
+
+
+
+/* media  */
+@media (max-width: 900px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 80%;
+        height: 100%;
+        background-color: #1C1C1C;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 50px 0;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 25px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Media query voor schermen tussen 768px en 1024px */
+@media (max-width: 1024px) {
+    .grid-container-intro {
+        grid-template-columns: repeat(2, 1fr); 
+        /* Twee kolommen */
+    }
+
+}
+
+/* Media query voor schermen kleiner dan 768px */
+@media (max-width: 768px) {
+
+    .name h1 {
+        font-size: 1.5rem;
+    }
+
+
+    .grid-container-intro {
+        grid-template-columns: 1fr; /* Eén kolom */
+    }
+
+    .grid-container-skills {
+        grid-template-columns: 2fr; /* Standaard één kolom */
+    
+    }
+
+    .grid-container-stats {
+        grid-template-columns: 0.8fr;
+        max-width: 95%; /* Standaard één kolom */
+        
+    
+    }
+
+    .grid-container-skills {
+        max-width: 80%;
+        gap: 0.5rem;
+        grid-template-columns: 1fr; /* Standaard één kolom */
+        
+    }
+
+    .grid-item-skills {
+        padding-top: 8rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+
+    .grid-container-skills {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+
+    .grid-item-skillbox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-container-work {
+        width: 95%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Popup container - hidden by default */
 .popup {
@@ -502,142 +606,8 @@ button:hover {
     cursor: pointer;
 }
 
-
-/* Algemene stijlen die voor alle schermen gelden */
-
-/* Media query voor schermen kleiner dan 480px */
-@media (max-width: 480px) {
-    .name h1 {
-        font-size: 1.5rem;
-    }
-
-    .grid-container-intro {
-        grid-template-columns: 1fr; /* Eén kolom */
-    }
-
-    .grid-container-skills {
-        grid-template-columns: 1fr; /* Eén kolom */
-        gap: 0.5rem;
-        max-width: 100%; /* Volledige breedte */
-    }
-
-    .grid-item-skills {
-        padding-top: 8rem;
-    }
-
-    .grid-item-skillbox {
-        grid-template-columns: auto; /* Eén kolom */
-    }
-
-    .popup-content h4 {
-        font-size: 2rem;
-    }
-
-    .popup-content .text {
-        font-size: 1rem;
-    }
-
-    .close-btn {
-        font-size: 3rem;
-        top: 1rem;
-        right: 1rem;
-    }
-
-    .grid-container-work {
-        width: 95%;
-    }
-}
-
-/* Media query voor schermen tussen 480px en 768px */
-@media (max-width: 768px) {
-    .name h1 {
-        font-size: 3rem;
-    }
-
-    .grid-container-intro {
-        grid-template-columns: 1fr; /* Eén kolom */
-    }
-
-    .grid-container-skills {
-        grid-template-columns: 1fr; /* Eén kolom */
-        gap: 0.5rem;
-        max-width: 80%; /* 80% breedte */
-    }
-
-    .grid-item-skills {
-        padding-top: 8rem;
-    }
-
-    .grid-item-skillbox {
-        grid-template-columns: auto; /* Eén kolom */
-    }
-
-    .popup-content h4 {
-        font-size: 2.5rem;
-    }
-
-    .popup-content .text {
-        font-size: 1.25rem;
-    }
-
-    .close-btn {
-        font-size: 4rem;
-        top: 2rem;
-        right: 2rem;
-    }
-
-    .grid-container-work {
-        width: 95%;
-    }
-}
-
-/* Media query voor schermen tussen 768px en 1024px */
-@media (max-width: 1024px) {
-    .grid-container-intro {
-        grid-template-columns: repeat(2, 1fr); /* Twee kolommen */
-    }
-
-    .grid-container-skills {
-        grid-template-columns: repeat(2, 1fr); /* Twee kolommen */
-    }
-
-    .grid-item-skillbox {
-        grid-template-columns: auto auto; /* Twee kolommen */
-    }
-}
-
-/* Media query voor schermen kleiner dan 1200px */
+/* Media Queries */
 @media (max-width: 1200px) {
-    /* Voeg hier eventuele specifieke stijlen toe voor schermen kleiner dan 1200px */
-}
-
-/* Media query voor schermen kleiner dan 900px */
-@media (max-width: 900px) {
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        width: 80%;
-        height: 100%;
-        background-color: #1C1C1C;
-        position: absolute;
-        left: 0;
-        top: 0;
-        padding: 50px 0;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .nav-list li {
-        margin: 25px 0;
-        text-align: center;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
     .popup-content h4 {
         font-size: 3rem;
     }
@@ -651,6 +621,88 @@ button:hover {
     }
 }
 
+@media (max-width: 768px) {
+    .popup-content h4 {
+        font-size: 2.5rem;
+    }
+
+    .popup-content .text {
+        font-size: 1.25rem;
+    }
+
+    .close-btn {
+        font-size: 4rem;
+        top: 2rem;
+        right: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-content h4 {
+        font-size: 2rem;
+    }
+
+    .popup-content .text {
+        font-size: 1rem;
+    }
+
+    .close-btn {
+        font-size: 3rem;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries voor responsiviteit */
+
+/* Voor schermen kleiner dan 1024px */
+@media (max-width: 1024px) {
+    .grid-container-skills {
+        max-width: 90%;
+        grid-template-columns: repeat(2, 1fr); /* Twee kolommen */
+    }
+
+    .grid-item-skillbox {
+        grid-template-columns: auto auto; /* Twee kolommen */
+    }
+}
+
+/* Voor schermen kleiner dan 768px */
+@media (max-width: 768px) {
+    .grid-container-skills {
+        grid-template-columns: 2fr; /* Eén kolom */
+    }
+
+    .grid-item-skillbox {
+        grid-template-columns: 2fr; /* Eén kolom */
+    }
+}
+
+/* Voor schermen kleiner dan 480px */
+@media (max-width: 480px) {
+    .grid-container-skills {
+        grid-template-columns: 1fr; /* Eén kolom */
+        max-width: 100%; /* Volledige breedte */
+    }
+
+
+}
+
+
+/* Media query voor schermen kleiner dan 768px */
 @media (max-width: 768px) {
     footer {
         flex-direction: column; /* Items onder elkaar plaatsen */
