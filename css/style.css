@@ -169,9 +169,9 @@ header img {
 
 .grid-container-skills {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: 1fr;
     gap: 1rem;
-    max-width: 60%;
+    max-width: 80%; 
     margin: 0 auto;
 }
 
@@ -182,19 +182,22 @@ header img {
 }
 
 .grid-item-skillbox {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    display: flex;
+    flex-wrap: wrap; 
     gap: 1rem;
 }
 
 .grid-item-skillbox p {
+    flex: 1; 
     text-align: center;
     font-weight: 400;
     font-size: 1.5rem;
     border: var(--text-color-skills) solid 1px;
     color: var(--text-color-skills);
     border-radius: 2rem;
-    padding: 0.5em
+    padding: 1em; 
+    margin: 0; 
+    box-sizing: border-box; 
 }
 
 .grid-item-skillbox p:hover {
@@ -356,7 +359,7 @@ button:hover {
 
 /* toggle */
 .toggle-checkbox {
-    position: absolute;
+    position: fixed;
     opacity: 0;
     cursor: pointer;
     height: 0;
@@ -364,7 +367,7 @@ button:hover {
 }
 
 .toggle-slot {
-    position: relative;
+    position: fixed;
     height: 4rem; 
     width: 8rem; 
     border-radius: 4rem; 
@@ -379,7 +382,7 @@ button:hover {
 
 .toggle-button {
     transform: translate(4.5rem, 0.5rem); 
-    position: absolute;
+    position: fixed;
     height: 3rem; 
     width: 3rem;
     border-radius: 50%;
@@ -533,7 +536,7 @@ button:hover {
     }
 
     .grid-container-work {
-        width: 95%;
+        width: 75%;
     }
 }
 
@@ -727,3 +730,23 @@ button:hover {
         margin: 1rem 0; /* Minder marge boven en onder de knop */
     }
 }
+
+
+/* Media query voor schermen kleiner dan 768px */
+@media (max-width: 768px) {
+    .grid-item-skills {
+        padding-top: 1em; /* Minder padding bovenaan */
+    }
+
+    .grid-container-skills {
+        max-width: 90%; /* Volledige breedte */
+    }
+
+    .grid-item-skillbox p {
+        font-size: 1rem; /* Nog kleinere lettergrootte voor kleinere schermen */
+        padding: 0.5em; /* Minder padding binnen elk p-element */
+    }
+
+}
+
+
