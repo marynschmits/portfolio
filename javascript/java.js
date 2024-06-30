@@ -9,6 +9,36 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.grid-item-work');
+    const closeBtns = document.querySelectorAll('.close-btn');
+    const popups = document.querySelectorAll('.popup');
+
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            const popupClass = this.getAttribute('data-popup-target');
+            const popup = document.querySelector(popupClass);
+            popup.style.display = 'block';
+        });
+    });
+
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            this.closest('.popup').style.display = 'none';
+        });
+    });
+
+    window.addEventListener('click', function(event) {
+        popups.forEach(popup => {
+            if (event.target == popup) {
+                popup.style.display = 'none';
+            }
+        });
+    });
+});
+
+
 const words = ["Maryn", "Designer", "Developer"]; // Array met woorden die je wilt laten verschijnen
 const speed = 200; // Snelheid van het typen (in milliseconden)
 const container = document.getElementById("dynamic-text");
@@ -110,6 +140,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+
+
 
 
 
