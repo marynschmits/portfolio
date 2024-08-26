@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,194 +12,117 @@
 </head>
 <body>
     <div class="customcursor">
-    <header>
-        <nav>
-            <button class="menu-toggle" aria-label="Open menu">☰</button>
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a class="hire" href="#contact-form">Contact</a></li>
-            </ul>
-            <label>
-                <input class='toggle-checkbox' type='checkbox'></input>
-                <div class='toggle-slot'>
-                  <div class='sun-icon-wrapper'>
-                    <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
-                  </div>
-                  <div class='toggle-button'></div>
+        <header>
+            <nav>
+                <button class="menu-toggle" aria-label="Open menu">☰</button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Werk</a></li>
+                    <li><a class="hire" href="#contact-form">Contact</a></li>
+                </ul>
+               
+            </nav>
+            <div class="name">
+                <h1>Hallo, ik ben <div id="dynamic-text-top" class="green"></div></h1>
+            </div>
+        </header>
+        <main>
+            <div class="social-container">
+                <a href="https://www.instagram.com/maryn_schmits/" class="social-button"><img src="assets/instagram.png" alt="instagramlogo"></a>
+                <a href="#" class="social-button"><img src="assets/facebook.png" alt="facebooklogo"></a>
+                <a href="#" class="social-button"><img src="assets/linkedin.png" alt="linkedinlogo"></a>
+            </div>
+            <div class="grid-container-intro">
+                <div class="grid-item-intro">
+                    <p>UX/UI Designer & Developer
+                        <div class="small">based in</div>
+                        <div class="green"><div class="customcursornl">The Netherlands</div></div>
+                    </p>
                 </div>
-              </label>
-        </nav>
-
-        <div class="name">
-            <h1>Hallo, ik ben <div id="dynamic-text" class="green"></div></h1>
-        </div>
-    </header>
-    <main>
-        <div class="social-container">
-            <a href="https://www.instagram.com/maryn_schmits/" class="social-button"><img src="assets/instagram.png" alt="instagramlogo"></a>
-            <a href="https://www.facebook.com/maryn.schmits/" class="social-button"><img src="assets/facebook.png" alt="facebooklogo"></a>
-            <a href="https://www.linkedin.com/in/maryn-schmits-3a3216295/" class="social-button"><img src="assets/linkedin.png" alt="linkedinlogo"></a>
-        </div>
-
-        <div class="grid-container-intro">
-            <div class="grid-item-intro">
-                <p>UX/UI Designer & Developer
-                    <div class="small">based in</div>
-                    <div class="green"><div class="customcursornl">The Netherlands</div></div>
+                <div class="grid-item-intro">
+                    <p>Wist je dat deze <div class="green">website</div> voor <div class="green"> 100%</div> uit <div class="green">code </div> bestaat?</p>
+                </div>
+                <div class="grid-item-photo"></div>
+            </div>
+            <div class="grid-container-skills">
+                <div class="grid-item-skills">
+                    <h2>Mijn skills zijn</h2>
+                </div>
+                <div class="grid-item-skills">
+                    <div class="grid-item-skillbox">
+                        <p>Branding</p>
+                        <p>Code</p>
+                        <p>Onderzoek</p>
+                        <p>Videografie</p>
+                        <p>Fotografie</p>
+                        <p>Logo design</p>
+                        <p>Webdesign</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-container-stats">
+                <div class="grid-item-stats">
+                    <h2 class="green">+1</h2>
+                    <p>jaren ervaring</p>
+                </div>
+                <div class="grid-item-stats">
+                    <h2 class="green">5</h2>
+                    <p>klanten tot nu toe</p>
+                </div>
+                <div class="grid-item-stats">
+                    <h2 class="green">+95%</h2>
+                    <p>klanttevredenheid</p>
+                </div>
+            </div>
+            <div class="grid-container-work">
+                <h2>Recent</h2>
+                <div class="grid-item-work">
+                    <img src="assets/startcode-cover.jpg" alt="Project 1">
+                    <div class="overlay">
+                        <div class="overlay-text">
+                            <h4>Star[t]code</h4>
+                            <p>jun. 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item-work">
+                    <img src="assets/unseenworld-cover.jpg" alt="Project 2">
+                    <div class="overlay">
+                        <div class="overlay-text">
+                            <h4>The Unseen World </h4>
+                            <p>apr. 2024</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item-work">
+                    <img src="assets/classico-cover.png" alt="Project 3">
+                    <div class="overlay">
+                        <div class="overlay-text">
+                            <h4>Rebrand Classico Hairstyling </h4>
+                            <p>mrt. 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1>Let's <div id="dynamic-text-bottom" class="green"></div> it<div class="green">.</div></h1>
+        </main>
+        <footer id="contact-form">
+            <div class="footer-item">
+                <h3>Contact</h3>
+                <p>
+                    <section>
+                        <form id="contact-form">
+                            <input type="text" id="name" name="name" placeholder="naam" required>
+                            <input type="email" id="email" name="email" placeholder="e-mailadres" required>
+                            <textarea id="message" name="message" rows="4" placeholder="bericht" required></textarea>
+                            <button type="submit">Verzenden</button>
+                        </form>
+                        <p id="response-message" style="display: none;"></p>
+                    </section>
                 </p>
             </div>
-            <div class="grid-item-intro">
-                <p>Wist je dat deze <div class="green">website</div> voor <div class="green"> 100%</div> uit <div class="green">code </div> bestaat?</p>
-            </div>
-            <div class="grid-item-photo"></div>
-        </div>
-
-        <div class="grid-container-skills">
-            <div class="grid-item-skills">
-               <h2>Mijn skills zijn</h2>
-            </div>
-            <div class="grid-item-skills">
-                <div class="grid-item-skillbox">
-                    <p>Branding</p>
-                    <p>Code</p>
-                    <p>Onderzoek</p>
-                    <p>Videografie</p>
-                    <p>Fotografie</p>
-                    <p>Logo design</p>
-                    <p>Webdesign</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="grid-container-stats">
-            <div class="grid-item-stats">
-                <h2 class="green">+1</h2>
-                <p>jaren ervaring</p>
-            </div>
-            <div class="grid-item-stats">
-                <h2 class="green">5</h2>
-                <p>klanten tot nu toe</p>
-            </div>
-            <div class="grid-item-stats">
-                <h2 class="green">+95%</h2>
-                <p>klanttevredenheid</p>
-            </div>
-        </div>
-
-        <div class="grid-container-work">
-            <h2>Recent</h2>
-            <div class="grid-item-work" data-popup-target=".popup-startcode">
-                <img src="assets/startcode-cover.jpg" alt="Project 1">
-                <div class="overlay">
-                    <div class="overlay-text">
-                        <h4>Star[t]code</h4>
-                        <p>jun. 2024</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item-work" data-popup-target=".popup-unseenworld">
-                <img src="assets/unseenworld-cover.jpg" alt="Project 2">
-                <div class="overlay">
-                    <div class="overlay-text">
-                        <h4>The Unseen World</h4>
-                        <p>apr. 2024</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item-work" data-popup-target=".popup-classico">
-                <img src="assets/classico-cover.png" alt="Project 3">
-                <div class="overlay">
-                    <div class="overlay-text">
-                        <h4>Rebrand Classico Hairstyling</h4>
-                        <p>mrt. 2024</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="popup popup-startcode">
-            <div class="popup-content">
-                <span class="close-btn">&times;</span>
-                <h4>Star[t]code</h4>
-                <p class="text">Star[t]Code is een fictief project dat ik samen met 3 medestudenten begin 2024 oprichte. Star[t]code richt zich op het aanbieden van workshops aan middelbare scholieren waarin ze de basisprincipes van coderen leren, met als doel jongeren enthousiast te maken voor technologie en hen de vaardigheden te geven die steeds belangrijker worden in onze digitale samenleving.</p>
-                <div class="grid-item-skills">
-                    <div class="grid-item-skillbox">
-                        <p>Branding</p>
-                        <p>Logo Design</p>
-                        <p>Webdesign</p>
-                        <p>Fotografie</p>
-                        <p>Drukwerk Design</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="popup popup-unseenworld">
-            <div class="popup-content">
-                <span class="close-btn">&times;</span>
-                <h4>The Unseen World</h4>
-                <p class="text">The Unseen World is een project waarbij ik de onzichtbare aspecten van blinden in onze wereld visualiseer door middel van kunst en technologie. Het doel is om mensen bewust te maken van de onzichtbaarheid die blinden hun hele leven hebben. </p>
-
-                <div class="video-container">
-                    <video id="unseen-world-video" preload="metadata">
-                        <source src="https://player.vimeo.com/progressive_redirect/playback/972505120/rendition/1080p/file.mp4?loc=external&signature=b8cb8ff6fb477eea6e7eaf145bebda33abc18f8b45d8b92c2c66a967343ee459" type="video/mp4">
-                    </video>
-                    <div id="custom-controls">
-                        <button id="play-button">play</button>
-                        <button id="pause-button">pause</button>
-                        <button id="fast-forward-button">+ 10s</button>
-                    </div>
-                </div>
-
-
-                <div class="grid-item-skills">
-                    <div class="grid-item-skillbox">
-                        <p>Graphic Design</p>
-                        <p>Processing code</p>
-                        <p>Research</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="popup popup-classico">
-            <div class="popup-content">
-                <span class="close-btn">&times;</span>
-                <h4>Rebrand Classico Hairstyling</h4>
-                <p class="text">Voor Classico Hairstyling heb ik een complete rebranding mogen doen, inclusief nieuw logo, website en marketingmateriaal zoals visitekaartjes, afsprakenkaartjes en het opfrissen van de socials om hun moderne en stijlvolle imago te versterken.</p>
-
-        
-
-                <div class="grid-item-skills">
-                    <div class="grid-item-skillbox">
-                        <p>Branding</p>
-                        <p>Logo Design</p>
-                        <p>Drukwerk Design</p>
-                        <p>Fotografie</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h1>Let's <div class="green">design</div> it<div class="green">.</div></h1>
-    </main>
-    <footer id="contact-form">
-        <div class="footer-item">
-            <h3>Contact</h3>
-            <p>
-            <section>
-                <form id="contact-form">
-                    <input type="text" id="name" name="name" placeholder="naam" required>
-                    <input type="email" id="email" name="email" placeholder="e-mailadres" required>
-                    <textarea id="message" name="message" rows="4" placeholder="bericht" required></textarea>
-                    <button type="submit">Verzenden</button>
-                </form>
-                <p id="response-message" style="display: none;"></p>
-            </section>
-        </div>
-        <div id="inline-datepicker"></div>
-        <button id="submitBtn">Afspraak maken</button>
-    </footer>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script src="javascript/java.js"></script>
+        </footer>
+    </div>
+    <script src="javascript/java.js"></script>
 </body>
 </html>
