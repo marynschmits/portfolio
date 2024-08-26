@@ -1,42 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Toggle menu
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navList = document.querySelector('.nav-list');
-
-    menuToggle.addEventListener('click', function() {
-        navList.classList.toggle('active');
-    });
-
-    // Popup functionality
-    const links = document.querySelectorAll('.grid-item-work');
-    const closeBtns = document.querySelectorAll('.close-btn');
-    const popups = document.querySelectorAll('.popup');
-
-    links.forEach(link => {
-        link.addEventListener('click', function() {
-            const popupClass = this.getAttribute('data-popup-target');
-            const popup = document.querySelector(popupClass);
-            if (popup) {
-                popup.style.display = 'block';
-            }
-        });
-    });
-
-    closeBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const popup = this.closest('.popup');
-            if (popup) {
-                popup.style.display = 'none';
-            }
-        });
-    });
-
-    window.addEventListener('click', function(event) {
-        popups.forEach(popup => {
-            if (event.target === popup) {
-                popup.style.display = 'none';
-            }
-        });
+    // Event Delegation for Menu Toggle
+    document.body.addEventListener('click', function(event) {
+        if (event.target.matches('.menu-toggle')) {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
+        }
     });
 
     // Dynamic text typing
@@ -113,26 +81,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     });
 
-    // Dark mode toggle
-    const checkbox = document.querySelector('.toggle-checkbox');
-    checkbox.addEventListener('change', function() {
-        if (this.checked) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
+    // Date Picker submit event with Event Delegation
+    document.body.addEventListener('click', function(event) {
+        if (event.target.matches("#submitBtn")) {
+            const selectedDate = datepicker.selectedDates[0];
+            if (selectedDate) {
+                alert("Je afspraak voor " + selectedDate.toLocaleDateString() + " is bevestigd!");
+            } else {
+                alert("Selecteer een datum voordat je verzendt.");
+            }
         }
     });
 
-
-
-    document.getElementById("submitBtn").addEventListener("click", function() {
-        const selectedDate = datepicker.selectedDates[0];
-        if (selectedDate) {
-            alert("Je afspraak voor " + selectedDate.toLocaleDateString() + " is bevestigd!");
-        } else {
-            alert("Selecteer een datum voordat je verzendt.");
-        }
-    });
-
-    
 });
