@@ -75,6 +75,45 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     });
 
+    /// script.js
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+document.addEventListener('scroll', function() {
+    const specialSections = document.querySelectorAll('.grid-container-intro');
+    const flagContainer = document.getElementById('flag-container');
+    
+    specialSections.forEach(section => {
+        if (isElementInViewport(section)) {
+            const numberOfFlags = 1; // Aantal vlaggetjes dat je per scroll wilt toevoegen
+
+            for (let i = 0; i < numberOfFlags; i++) {
+                let flag = document.createElement('img');
+                flag.src = 'assets/nl-cursor.png';  // Vervang met het juiste pad naar je afbeelding
+                flag.className = 'flag';
+
+                // Plaats de vlag op een willekeurige positie
+                flag.style.left = Math.random() * window.innerWidth + 'px';
+                flag.style.top = Math.random() * window.innerHeight + 'px';
+
+                flagContainer.appendChild(flag);
+
+                // Verwijder de vlag na een tijdje
+                setTimeout(() => {
+                    flag.remove();
+                }, 3000);
+            }
+        }
+    });
+});
 
 
     // Slideshow initialization
@@ -110,42 +149,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // script.js
 
-function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+function animateNumbers(element, target) {
+    let start = 0;
+    const duration = 2000; // Duur van de animatie in milliseconden
+    const increment = target / (duration / 16); // Bereken de toename per frame
+
+    function updateNumber() {
+        start += increment;
+        if (start < target) {
+            element.textContent = Math.floor(start);
+            requestAnimationFrame(updateNumber);
+        } else {
+            element.textContent = target;
+        }
+    }
+
+    updateNumber();
 }
 
-document.addEventListener('scroll', function() {
-    const specialSections = document.querySelectorAll('.grid-container-intro');
-    const flagContainer = document.getElementById('flag-container');
-    
-    specialSections.forEach(section => {
-        if (isElementInViewport(section)) {
-            const numberOfFlags = 1; // Aantal vlaggetjes dat je per scroll wilt toevoegen
-
-            for (let i = 0; i < numberOfFlags; i++) {
-                let flag = document.createElement('img');
-                flag.src = 'assets/nl-cursor.png';  // Vervang met het juiste pad naar je afbeelding
-                flag.className = 'flag';
-
-                // Plaats de vlag op een willekeurige positie
-                flag.style.left = Math.random() * window.innerWidth + 'px';
-                flag.style.top = Math.random() * window.innerHeight + 'px';
-
-                flagContainer.appendChild(flag);
-
-                // Verwijder de vlag na een tijdje
-                setTimeout(() => {
-                    flag.remove();
-                }, 2000);
-            }
+// Gebruik de IntersectionObserver API
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const element = entry.target;
+            const target = parseInt(element.getAttribute('data-target'));
+            animateNumbers(element, target);
         }
     });
+});
+
+// Observeer alle getallen in de grid-container-stats
+const counters = document.querySelectorAll('.grid-item-stats h2');
+counters.forEach(counter => {
+    observer.observe(counter);
 });
 
 });
