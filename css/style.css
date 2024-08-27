@@ -308,6 +308,12 @@ h1 {
     .grid-item-work {
        max-height: 50vh; 
     }
+
+    .grid-item-photo {
+    
+        filter: grayscale(0%);  
+    
+    }
 }
 
 
@@ -419,7 +425,6 @@ footer {
     margin-bottom: 1em;
     display: flex;
     align-items: center;
-    justify-content: center;
     
 }
 
@@ -436,23 +441,24 @@ h3 {
     padding-left: 2rem;
 }
 
-form {
-    background: none;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    max-width: 500px;
-    align-items: center;
+footer p  {
+
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    max-width: 70%;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    color: white;
-    background-color: #1C1C1C;
-    border: none;
-    border-radius: 0.25rem;
+footer a {
+  text-decoration: none;
+  color: #B8EE20;
+    
 }
+
+
+
+
+
 
 button {
     background-color:#B8EE20;
@@ -467,10 +473,7 @@ button:hover {
     background-color: #99d100;
 }
 
-#response-message {
-    padding-left: 2rem;
-    margin-top: 1rem;
-}
+
 
 
 

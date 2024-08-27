@@ -184,4 +184,10 @@ counters.forEach(counter => {
     observer.observe(counter);
 });
 
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Voorkom de standaard formulieractie
+
+
+});
 });
