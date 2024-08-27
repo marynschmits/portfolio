@@ -1,11 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Event Delegation for Menu Toggle
-    document.body.addEventListener('click', function(event) {
-        if (event.target.matches('.menu-toggle')) {
-            const navList = document.querySelector('.nav-list');
-            navList.classList.toggle('active');
-        }
-    });
+    
 
     // Dynamic text typing
     const topTextElement = document.getElementById('dynamic-text-top');
@@ -81,16 +75,77 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 500);
     });
 
-    // Date Picker submit event with Event Delegation
-    document.body.addEventListener('click', function(event) {
-        if (event.target.matches("#submitBtn")) {
-            const selectedDate = datepicker.selectedDates[0];
-            if (selectedDate) {
-                alert("Je afspraak voor " + selectedDate.toLocaleDateString() + " is bevestigd!");
-            } else {
-                alert("Selecteer een datum voordat je verzendt.");
+
+
+    // Slideshow initialization
+    function initializeSlides() {
+        let slideshowContainers = document.querySelectorAll(".slideshow-container");
+
+        slideshowContainers.forEach(container => {
+            let slideIndex = 0;
+            let slides = container.getElementsByClassName("slide");
+
+            function showSlides() {
+                for (let j = 0; j < slides.length; j++) {
+                    slides[j].style.display = "none";  // Verberg alle slides
+                }
+
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;  // Herstel index als nodig
+                }
+
+                slides[slideIndex - 1].style.display = "block";  // Toon de huidige slide
+                slides[slideIndex - 1].classList.add('fade');  // Voeg fade-animatie toe
+
+                setTimeout(showSlides, 3000);  // Verander de slide elke 2 seconden
+            }
+
+            showSlides();  // Start de slideshow voor deze container
+        });
+    }
+
+    initializeSlides();  // Initialiseer alle slideshows
+
+
+    // script.js
+
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+document.addEventListener('scroll', function() {
+    const specialSections = document.querySelectorAll('.grid-container-intro');
+    const flagContainer = document.getElementById('flag-container');
+    
+    specialSections.forEach(section => {
+        if (isElementInViewport(section)) {
+            const numberOfFlags = 1; // Aantal vlaggetjes dat je per scroll wilt toevoegen
+
+            for (let i = 0; i < numberOfFlags; i++) {
+                let flag = document.createElement('img');
+                flag.src = 'assets/nl-cursor.png';  // Vervang met het juiste pad naar je afbeelding
+                flag.className = 'flag';
+
+                // Plaats de vlag op een willekeurige positie
+                flag.style.left = Math.random() * window.innerWidth + 'px';
+                flag.style.top = Math.random() * window.innerHeight + 'px';
+
+                flagContainer.appendChild(flag);
+
+                // Verwijder de vlag na een tijdje
+                setTimeout(() => {
+                    flag.remove();
+                }, 2000);
             }
         }
     });
+});
 
 });
