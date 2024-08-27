@@ -649,7 +649,7 @@ h6 {
 #live-clock {
     font-size: 1rem;
     z-index: 5;
-    text-align: center;
+   
     padding: 30px;
     color: #fff;
     position: fixed;
