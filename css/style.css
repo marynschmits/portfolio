@@ -645,3 +645,34 @@ h6 {
     text-align: center;
     padding: 1rem;
 }
+
+#live-clock {
+    font-size: 1rem;
+    z-index: 5;
+    text-align: center;
+    padding: 30px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Loader vult het hele scherm */
+    font-size: 8rem; /* Grootte van het percentage */
+    background-color: #B8EE20; /* Achtergrondkleur van de loader */
+}
+
+#percentage-display {
+    color: #1C1C1C; /* Kleur van het percentage */
+    font-weight: bold;
+}
+#content {
+    
+    display: none; /* Verberg de inhoud totdat de pagina is geladen */
+}
+
+

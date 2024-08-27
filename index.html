@@ -9,187 +9,183 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     
-   
-    
     <title>Maryn Schmits Designs</title>
 </head>
 <body>
-    <div id="flag-container"></div>
-    <div class="fixed-logo">
-        <img src="assets/logo.png" alt="Logo">
+
+    <div id="loader">
+        <div id="percentage-display">0%</div> <!-- Hier wordt het percentage getoond -->
     </div>
-    <div class="customcursor">
-        <header>
-            
-            <div class="name">
-                <h1>Hallo, ik ben <div id="dynamic-text-top" class="green"></div></h1>
-            </div>
-        </header>
-        <main>
-            <div class="social-container">
-                <a href="https://www.instagram.com/marynschmits.designs/" class="social-button"><img src="assets/instagram.png" alt="instagramlogo"></a>
-                <a href="https://www.facebook.com/profile.php?id=61561569939386" class="social-button"><img src="assets/facebook.png" alt="facebooklogo"></a>
-                <a href="https://www.linkedin.com/in/maryn-schmits-3a3216295/" class="social-button"><img src="assets/linkedin.png" alt="linkedinlogo"></a>
-            </div>
-            <div class="grid-container-intro">
-                <div class="grid-item-intro">
-                    <p>UX/UI Designer & Developer
-                        <div class="small">based in</div>
-                        <div class="green"><div class="customcursornl">The Netherlands</div></div>
-                    </p>
-                </div>
-                <div class="grid-item-intro">
-                    <p>Wist je dat deze <div class="green">website</div> voor <div class="green"> 100%</div> uit <div class="green">code </div> bestaat?</p>
-                </div>
-                <div class="grid-item-photo"></div>
-            </div>
-            <div class="grid-container-skills">
-                <div class="grid-item-skills">
-                    <h2>Mijn skills zijn</h2>
-                </div>
-                <div class="grid-item-skills">
-                    <div class="grid-item-skillbox">
-                        <p>Branding</p>
-                        <p>Code</p>
-                        <p>Onderzoek</p>
-                        <p>Videografie</p>
-                        <p>Fotografie</p>
-                        <p>Logo design</p>
-                        <p>Webdesign</p>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-container-stats">
-                <div class="grid-item-stats">
-                    <h2 class="green" data-target="1">0</h2>
-                    <p>jaren ervaring</p>
-                </div>
-                <div class="grid-item-stats">
-                    <h2 class="green" data-target="5">0</h2>
-                    <p>klanten tot nu toe</p>
-                </div>
-                <div class="grid-item-stats">
-                    <h2 class="green" data-target="95"></h2>
-                    <p>klanttevredenheids %</p>
-                </div>
-            </div>
-            
-            <div class="grid-container-work">
-                <h2>Recent</h2>
 
-               
-                
-                <!-- Project 1 met Slideshow -->
-                <div class="grid-item-work">
-                    <div class="slideshow-container">
-                        <div class="slide fade">
-                            <img src="assets/hdp-1.jpg" alt="Project 1" style="width:100%">
-                        </div>
-                        <div class="slide fade">
-                            <img src="assets/hdp-3.jpg" alt="Project 1 - Slide 2" style="width:100%">
-                        </div>
-                        <div class="slide fade">
-                            <img src="assets/hdp-2.jpg" alt="Project 1 - Slide 3" style="width:100%">
-                        </div>
-                        <div class="slide fade">
-                            <img src="assets/hdp-4.jpg" alt="Project 1 - Slide 3" style="width:100%">
+    <div id="content" style="display: none;"> 
+        <div id="flag-container"></div>
+        <div id="live-clock"></div>
+        <div class="fixed-logo">
+            <img src="assets/logo.png" alt="Logo">
+        </div>
+        <div class="customcursor">
+            <header>
+                <div class="name">
+                    <h1>Hallo, ik ben <div id="dynamic-text-top" class="green"></div></h1>
+                </div>
+            </header>
+            <main>
+                <div class="social-container">
+                    <a href="https://www.instagram.com/marynschmits.designs/" class="social-button"><img src="assets/instagram.png" alt="instagramlogo"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61561569939386" class="social-button"><img src="assets/facebook.png" alt="facebooklogo"></a>
+                    <a href="https://www.linkedin.com/in/maryn-schmits-3a3216295/" class="social-button"><img src="assets/linkedin.png" alt="linkedinlogo"></a>
+                </div>
+                <div class="grid-container-intro">
+                    <div class="grid-item-intro">
+                        <p>UX/UI Designer & Developer
+                            <div class="small">based in</div>
+                            <div class="green"><div class="customcursornl">The Netherlands</div></div>
+                        </p>
+                    </div>
+                    <div class="grid-item-intro">
+                        <p>Wist je dat deze <div class="green">website</div> voor <div class="green"> 100%</div> uit <div class="green">code </div> bestaat?</p>
+                    </div>
+                    <div class="grid-item-photo"></div>
+                </div>
+                <div class="grid-container-skills">
+                    <div class="grid-item-skills">
+                        <h2>Mijn skills zijn</h2>
+                    </div>
+                    <div class="grid-item-skills">
+                        <div class="grid-item-skillbox">
+                            <p>Branding</p>
+                            <p>Code</p>
+                            <p>Onderzoek</p>
+                            <p>Videografie</p>
+                            <p>Fotografie</p>
+                            <p>Logo design</p>
+                            <p>Webdesign</p>
                         </div>
                     </div>
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <h4>HDP - brand creation</h4>
-                            <p>jul. 2024</p>
-                        </div>
+                </div>
+                <div class="grid-container-stats">
+                    <div class="grid-item-stats">
+                        <h2 class="green" data-target="1">0</h2>
+                        <p>jaren ervaring</p>
+                    </div>
+                    <div class="grid-item-stats">
+                        <h2 class="green" data-target="5">0</h2>
+                        <p>klanten tot nu toe</p>
+                    </div>
+                    <div class="grid-item-stats">
+                        <h2 class="green" data-target="95">0</h2>
+                        <p>klanttevredenheids %</p>
                     </div>
                 </div>
                 
-                <!-- Project 2 met Slideshow -->
-                <div class="grid-item-work">
-                    <div class="slideshow-container">
-                        <div class="slide fade">
-                            <img src="assets/startcode-cover.jpg" alt="Project 2 - Slide 1" style="width:100%">
+                <div class="grid-container-work">
+                    <h2>Recent</h2>
+
+                    <!-- Project 1 met Slideshow -->
+                    <div class="grid-item-work">
+                        <div class="slideshow-container">
+                            <div class="slide fade">
+                                <img src="assets/hdp-1.jpg" alt="Project 1" style="width:100%">
+                            </div>
+                            <div class="slide fade">
+                                <img src="assets/hdp-3.jpg" alt="Project 1 - Slide 2" style="width:100%">
+                            </div>
+                            <div class="slide fade">
+                                <img src="assets/hdp-2.jpg" alt="Project 1 - Slide 3" style="width:100%">
+                            </div>
+                            <div class="slide fade">
+                                <img src="assets/hdp-4.jpg" alt="Project 1 - Slide 3" style="width:100%">
+                            </div>
                         </div>
-                        <div class="slide fade">
-                            <img src="assets/sc-2.jpg" alt="Project 2 - Slide 2" style="width:100%">
+                        <div class="overlay">
+                            <div class="overlay-text">
+                                <h4>HDP - brand creation</h4>
+                                <p>jul. 2024</p>
+                            </div>
                         </div>
-                        <div class="slide fade">
-                            <img src="assets/sc-3.jpg" alt="Project 2 - Slide 2" style="width:100%">
-                        </div>
-                        <div class="slide fade">
-                            <img src="assets/sc-4.jpg" alt="Project 2 - Slide 2" style="width:100%">
-                        </div>
-                        <!-- Voeg meer slides toe als nodig -->
                     </div>
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <h4>Star[t]code - brand creation</h4>
-                            <p>jun. 2024</p>
+                    
+                    <!-- Project 2 met Slideshow -->
+                    <div class="grid-item-work">
+                        <div class="slideshow-container">
+                            <div class="slide fade">
+                                <img src="assets/startcode-cover.jpg" alt="Project 2 - Slide 1" style="width:100%">
+                            </div>
+                            <div class="slide fade">
+                                <img src="assets/sc-2.jpg" alt="Project 2 - Slide 2" style="width:100%">
+                            </div>
+                            <div class="slide fade">
+                                <img src="assets/sc-3.jpg" alt="Project 2 - Slide 2" style="width:100%">
+                            </div>
+                            <div class="slide fade">
+                                <img src="assets/sc-4.jpg" alt="Project 2 - Slide 2" style="width:100%">
+                            </div>
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-text">
+                                <h4>Star[t]code - brand creation</h4>
+                                <p>jun. 2024</p>
+                            </div>
                         </div>
                     </div>
+                    
+                    <!-- Project 3 met Slideshow -->
+                    <div class="grid-item-work">
+                        <div class="slideshow-container">
+                            <div class="slide fade">
+                                <img src="assets/unseenworld-cover.jpg" alt="Project 2 - Slide 1" style="width:100%">
+                            </div>
+                            <div class="slide fade">
+                                <img src="assets/uw-2.jpg" alt="Project 2 - Slide 2" style="width:100%">
+                            </div>
+                            <div class="slide fade">
+                                <img src="assets/uw-3.jpg" alt="Project 2 - Slide 2" style="width:100%">
+                            </div>
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-text">
+                                <h4>The Unseen World - music visual coding</h4>
+                                <p>apr. 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 met Slideshow -->
+                    <div class="grid-item-work">
+                        <div class="slideshow-container">
+                            <div class="slide fade">
+                                <img src="assets/ch-3.jpg" alt="Project 3 - Slide 1" style="width:100%">
+                            </div>
+                            <div class="slide fade">
+                                <img src="assets/Cosmetic Bottle Mockups - kopie.png" alt="Project 3 - Slide 2" style="width:100%">
+                            </div>
+                            <div class="slide fade">
+                                <img src="assets/ch-2.jpg" alt="Project 3 - Slide 2" style="width:100%">
+                            </div>
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-text">
+                                <h4>Classico Hairstyling - rebrand</h4>
+                                <p>mrt. 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 
-                <!-- Project 3 met Slideshow -->
-                <div class="grid-item-work">
-                    <div class="slideshow-container">
-                        <div class="slide fade">
-                            <img src="assets/unseenworld-cover.jpg" alt="Project 2 - Slide 1" style="width:100%">
-                        </div>
-                        <div class="slide fade">
-                            <img src="assets/uw-2.jpg" alt="Project 2 - Slide 2" style="width:100%">
-                        </div>
-                        <div class="slide fade">
-                            <img src="assets/uw-3.jpg" alt="Project 2 - Slide 2" style="width:100%">
-                        </div>
-                        <!-- Voeg meer slides toe als nodig -->
-                    </div>
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <h4>The Unseen World - music visual coding</h4>
-                            <p>apr. 2024</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 met Slideshow -->
-                <div class="grid-item-work">
-                    <div class="slideshow-container">
-                       
-                        <div class="slide fade">
-                            <img src="assets/ch-3.jpg" alt="Project 3 - Slide 1" style="width:100%">
-                        </div>
-                        <div class="slide fade">
-                            <img src="assets/Cosmetic Bottle Mockups - kopie.png" alt="Project 3 - Slide 2" style="width:100%">
-                        </div>
-                        <div class="slide fade">
-                            <img src="assets/ch-2.jpg" alt="Project 3 - Slide 2" style="width:100%">
-                        </div>
-                        <!-- Voeg meer slides toe als nodig -->
-                    </div>
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <h4>Classico Hairstyling - rebrand</h4>
-                            <p>mrt. 2024</p>
-                        </div>
-                    </div>
-                </div>
-
-               
-            </div>
-            
-            <h1>Let's <div id="dynamic-text-bottom" class="green"></div> it<div class="green">.</div></h1>
-        </main>
-        <footer id="contact-form">
-            <div class="footer-item">
-                <h3>Contact</h3>
-                <p>
-                    laten we samenwerken! Neem gerust <a href="mailto:marynschmits.contact@gmail.com">contact</a> op.  </p>
+                <h1>Let's <div id="dynamic-text-bottom" class="green"></div> it<div class="green">.</div></h1>
 
                 
-            </div>
-            
-        </footer>
-        <h6> Maryn Schmits Designs ©2024</h6>
-    </div>
+            </main>
+            <footer id="contact-form">
+                <div class="footer-item">
+                    <h3>Contact</h3>
+                    <p>
+                        laten we samenwerken! Neem gerust <a href="mailto:marynschmits.contact@gmail.com">contact</a> op.  </p>
+                </div>
+            </footer>
+            <h6>Maryn Schmits Designs ©2024</h6>
+        </div> <!-- Sluit de div voor de content -->
     <script src="javascript/java.js"></script>
 </body>
 </html>
