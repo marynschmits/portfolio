@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
-
     // Progress bar as percentage
-    var percentageDisplay = document.getElementById("percentage-display");
-    var width = 0;
+    const percentageDisplay = document.getElementById("percentage-display");
+    let width = 0;
 
-    var interval = setInterval(function() {
+    const interval = setInterval(() => {
         if (width >= 100) {
             clearInterval(interval);
             document.getElementById("loader").style.display = "none"; // Verberg de loader
@@ -25,8 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let topIndex = 0;
     let bottomIndex = 0;
-    let topCharIndex = 0;
-    let bottomCharIndex = 0;
 
     const typeSpeed = 100;
     const deleteSpeed = 100;
@@ -35,8 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const typeEffect = (element, words, index, charIndex, callback) => {
         if (charIndex < words[index].length) {
             element.textContent += words[index].charAt(charIndex);
-            charIndex++;
-            setTimeout(() => typeEffect(element, words, index, charIndex, callback), typeSpeed);
+            setTimeout(() => typeEffect(element, words, index, charIndex + 1, callback), typeSpeed);
         } else {
             setTimeout(() => deleteEffect(element, words, index, charIndex, callback), pauseTime);
         }
@@ -45,8 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const deleteEffect = (element, words, index, charIndex, callback) => {
         if (charIndex > 0) {
             element.textContent = element.textContent.substring(0, charIndex - 1);
-            charIndex--;
-            setTimeout(() => deleteEffect(element, words, index, charIndex, callback), deleteSpeed);
+            setTimeout(() => deleteEffect(element, words, index, charIndex - 1, callback), deleteSpeed);
         } else {
             callback();
         }
@@ -92,33 +87,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Slideshow initialization
     function initializeSlides() {
-        let slideshowContainers = document.querySelectorAll(".slideshow-container");
+        const slideshowContainers = document.querySelectorAll(".slideshow-container");
 
         slideshowContainers.forEach(container => {
             let slideIndex = 0;
-            let slides = container.getElementsByClassName("slide");
+            const slides = container.getElementsByClassName("slide");
 
             function showSlides() {
                 for (let j = 0; j < slides.length; j++) {
-                    slides[j].style.display = "none";  // Verberg alle slides
+                    slides[j].style.display = "none"; // Verberg alle slides
                 }
 
                 slideIndex++;
                 if (slideIndex > slides.length) {
-                    slideIndex = 1;  // Herstel index als nodig
+                    slideIndex = 1; // Herstel index als nodig
                 }
 
-                slides[slideIndex - 1].style.display = "block";  // Toon de huidige slide
-                slides[slideIndex - 1].classList.add('fade');  // Voeg fade-animatie toe
+                slides[slideIndex - 1].style.display = "block"; // Toon de huidige slide
+                slides[slideIndex - 1].classList.add('fade'); // Voeg fade-animatie toe
 
-                setTimeout(showSlides, 3000);  // Verander de slide elke 3 seconden
+                setTimeout(showSlides, 3000); // Verander de slide elke 3 seconden
             }
 
-            showSlides();  // Start de slideshow voor deze container
+            showSlides(); // Start de slideshow voor deze container
         });
     }
 
-    initializeSlides();  // Initialiseer alle slideshows
+    initializeSlides(); // Initialiseer alle slideshows
 
     // Animate numbers
     function animateNumbers(element, target) {
@@ -213,4 +208,53 @@ document.addEventListener("DOMContentLoaded", function() {
         );
     }
 
+    // Slideshow functionaliteit
+    let currentSlide = 1;
+
+    function displaySlides(n) {
+        const slides = document.getElementsByClassName("carousel-slide");
+        if (n > slides.length) { 
+            currentSlide = 1; 
+        }
+        if (n < 1) { 
+            currentSlide = slides.length; 
+        }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[currentSlide - 1].style.display = "block";
+    }
+
+    function changeSlide(n) {
+        displaySlides(currentSlide += n);
+    }
+
+    // Event listeners voor de pijltjes in de carousel
+    document.querySelector(".carousel-prev").addEventListener("click", function() {
+        changeSlide(-1); // Ga naar de vorige slide
+    });
+
+    document.querySelector(".carousel-next").addEventListener("click", function() {
+        changeSlide(1); // Ga naar de volgende slide
+    });
+
+    displaySlides(currentSlide); // Start de slideshow door de eerste slide weer te geven
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var items = document.querySelectorAll('.grid-item-work');
+        
+        items.forEach(function(item) {
+            item.addEventListener('click', function() {
+                // Verwijder de 'active' klasse van alle items
+                items.forEach(function(i) {
+                    if (i !== item) {
+                        i.classList.remove('active');
+                    }
+                });
+                // Toggle de 'active' klasse op het geklikte item
+                item.classList.toggle('active');
+            });
+        });
+    });
 });

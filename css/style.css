@@ -676,3 +676,38 @@ h6 {
 }
 
 
+.photoCarousel-container {
+    position: relative;
+    max-width: 50%;
+    margin: auto;
+}
+
+.carousel-slide {
+    display: none;
+    position: relative;
+    text-align: center;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 30px;
+    padding: 16px;
+    cursor: pointer;
+    z-index: 5; /* Zorg dat de pijltjes boven de afbeeldingen worden weergegeven */
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-slide img {
+    width: 100%; /* Verander naar 100% om de volledige breedte van de container te vullen */
+    height: auto;
+}
