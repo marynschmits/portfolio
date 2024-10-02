@@ -168,34 +168,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(updateClock, 1000); // Update elke seconde
     updateClock(); // Direct aanroepen om klok meteen weer te geven
 
-    // Vlaggen scroll effect
-    document.addEventListener('scroll', function() {
-        const specialSections = document.querySelectorAll('.grid-container-intro');
-        const flagContainer = document.getElementById('flag-container');
-        
-        specialSections.forEach(section => {
-            if (isElementInViewport(section)) {
-                const numberOfFlags = 1; // Aantal vlaggetjes dat je per scroll wilt toevoegen
-
-                for (let i = 0; i < numberOfFlags; i++) {
-                    let flag = document.createElement('img');
-                    flag.src = 'assets/nl-cursor.png';  // Vervang met het juiste pad naar je afbeelding
-                    flag.className = 'flag';
-
-                    // Plaats de vlag op een willekeurige positie
-                    flag.style.left = Math.random() * window.innerWidth + 'px';
-                    flag.style.top = Math.random() * window.innerHeight + 'px';
-
-                    flagContainer.appendChild(flag);
-
-                    // Verwijder de vlag na een tijdje
-                    setTimeout(() => {
-                        flag.remove();
-                    }, 3000);
-                }
-            }
-        });
-    });
+    
 
     // Helperfunctie om te controleren of een element in viewport is
     function isElementInViewport(el) {
